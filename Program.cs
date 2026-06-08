@@ -76,7 +76,7 @@ builder.Services.AddSerilog((services, lc) => lc
     .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information));
 
 var app = builder.Build();
-
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
