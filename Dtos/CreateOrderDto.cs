@@ -1,8 +1,7 @@
-﻿using System;
-
-public class Class1
+﻿namespace InventoryApiProject.Dtos
 {
-	public Class1()
-	{
-	}
+    public class CreateOrderDto
+    {
+        public List<CreateOrderItemDto> Items { get; set; }
+    }
 }
